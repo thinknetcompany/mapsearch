@@ -4,7 +4,7 @@
 ในการเลือกใช้ style ของ map ให้กำหนด parameter style ในตอนสร้าง URL ไปยัง MapStyle แล้วใส่ชื่อ style ที่ต้องการ
 
 ```javascript
-&style={ชื่อ style}
+https://api-maps.thinknet.co.th/v2/maps-styles/{ชื่อ style}
 
 ```
 ## รายชื่อ Map Styles
