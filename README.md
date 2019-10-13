@@ -67,12 +67,6 @@ require('node_modules/mapbox-gl/dist/mapbox-gl.css')
   <body>
     <div id="map" style="height: 100vh;" />
     <script>
-      const map = new thinknetmaps.Map({
-        container: 'map', // id ของ div ที่จะให้ map ไป render
-        app_id: 'YOUR_APP_ID',
-        api_key: 'YOUR_API_KEY',
-      })
-
       mapboxgl.accessToken = '';
       var style_name = 'ivory';
       var app_id = '{YOUR_APP_ID}';
