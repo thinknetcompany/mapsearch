@@ -61,8 +61,8 @@ require('node_modules/mapbox-gl/dist/mapbox-gl.css')
 ```html
 <html>
   <head>
-    <script src='https://api-maps.thinknet.co.th/libs/thinknetmaps.1.2.0-rc0.min.js'></script>
-    <link href='https://api-maps.thinknet.co.th/libs/thinknetmaps.1.2.0-rc0.min.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <div id="map" style="height: 100vh;" />
