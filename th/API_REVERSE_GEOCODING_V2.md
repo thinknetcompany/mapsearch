@@ -23,6 +23,7 @@
 | rankby | เรียงลำดับ poi จากหมวดหมู่หรือประเภท โดยอ้างอิงจาก [Types](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#type) และ [Categories](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#category) ตัวอย่างเช่น `"sport_club,telephone"` เรียงความสำคัญจากตัวแรก | string | - |
 | sort | เรียงลำดับ poi โดยที่เลือกได้มี `"distance"` คือเรียงตามระยะห่าง โดยจะเริ่มจากใกล้สุด | string | - |
 | filter | กรองผลลัพธ์จากหมวดหมู่หรือประเภท ตัวอย่างเช่น `"bts,mrt"` โดยอ้างอิงจาก [Types](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#type) และ [Categories](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#category) | string | - |
+| limit | จำกัดจำนวนผลลัพธ์ของ POI | number | 10 |
 | app_id | Application ID ที่ได้จากการ register | string | - |
 | api_key | API Key ที่ได้จากการ register | string | - |
 
