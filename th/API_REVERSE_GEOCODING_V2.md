@@ -19,11 +19,12 @@
 | lat | ค่าละติจูดของตำแหน่งที่ต้องการ | number | - |
 | lng | ค่าลองจิจูดของตำแหน่งที่ต้องการ | number | - |
 | radius | กำหนดระยะการค้นหารอบๆ marker (เมตร) | number | 10 |
-| response_type | ลักษณะของ response ที่ได้โดยที่เลือกได้ 4 แบบระหว่าง `"simple"`, `"nearby"`, `"area"` และ `"full"` [อธิบายเพิ่มเติม](#responses-simple) | string | `"nearby"` |
-| rankby | เรียงลำดับ poi จากหมวดหมู่หรือประเภท โดยอ้างอิงจาก [Types](https://github.com/thinknetcompany/thinknetmaps/blob/master/readme-type-category.md#type) และ [Categories](https://github.com/thinknetcompany/thinknetmaps/blob/master/readme-type-category.md#category) ตัวอย่างเช่น `"sport_club,telephone"` เรียงความสำคัญจากตัวแรก | string | - |
-| filter | กรองผลลัพธ์จากหมวดหมู่หรือประเภท ตัวอย่างเช่น `"bts,mrt"` โดยอ้างอิงจาก [Types](https://github.com/thinknetcompany/thinknetmaps/blob/master/readme-type-category.md#type) และ [Categories](https://github.com/thinknetcompany/thinknetmaps/blob/master/readme-type-category.md#category) | string | - |
-| app_id | Application ID ที่ได้จากการ register บน [THiNKNET Maps](https://developer-maps.thinknet.co.th/auth/signin) ใช้ในการ authentication | string | - |
-| api_key | API Key ที่ได้จากการ register บน [THiNKNET Maps](https://developer-maps.thinknet.co.th/auth/signin) ใช้ในการ authentication | string | - |
+| response_type | ลักษณะของ response ที่ได้โดยที่เลือกได้ 4 แบบระหว่าง `"simple"`, `"nearby"`, `"area"`, `"full"` และ `"fullarea"` [อธิบายเพิ่มเติม](#responses-simple) | string | `"nearby"` |
+| rankby | เรียงลำดับ poi จากหมวดหมู่หรือประเภท โดยอ้างอิงจาก [Types](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#type) และ [Categories](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#category) ตัวอย่างเช่น `"sport_club,telephone"` เรียงความสำคัญจากตัวแรก | string | - |
+| sort | เรียงลำดับ poi โดยที่เลือกได้มี `"distance"` คือเรียงตามระยะห่าง โดยจะเริ่มจากใกล้สุด | string | - |
+| filter | กรองผลลัพธ์จากหมวดหมู่หรือประเภท ตัวอย่างเช่น `"bts,mrt"` โดยอ้างอิงจาก [Types](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#type) และ [Categories](https://github.com/thinknetcompany/mapservices/blob/master/th/readme-type-category.md#category) | string | - |
+| app_id | Application ID ที่ได้จากการ register | string | - |
+| api_key | API Key ที่ได้จากการ register | string | - |
 
 ### Responses `simple`
 | Property | Description | Type |
@@ -48,6 +49,13 @@
 | area | ตำแหน่งพื้นที่ปัจจุบัน | object |
 | street | ถนนที่ได้จากตำแหน่งปัจจุบัน | object |
 | nearbyPOI |  ตำแหน่งของสถานที่ที่ใกล้เคียงกับตำแหน่งปัจจุบัน โดยเรียงตามระยะทางที่ใกล้กว่า | [object] |
+
+### Responses `fullarea`
+| Property | Description | Type |
+|----------|-------------|------|
+| area | ตำแหน่งพื้นที่ปัจจุบัน | object |
+| street | ถนนที่ได้จากตำแหน่งปัจจุบัน | object |
+| nearbyPOI |  ตำแหน่งของสถานที่ที่ใกล้เคียงกับตำแหน่งปัจจุบัน โดยจะดูว่าถ้าอยู่ในบริเวณของสถานที่หลักจะนำ POI ของสถานที่หลักขึ้นมาก่อน และเรียงตามระยะทางที่ใกล้กว่า | [object] |
 
 ### ตัวอย่างการใช้งาน
 #### Request `simple`
@@ -146,9 +154,11 @@
   }
 }
 ```
-#### Request `full`
+#### Request `full, fullarea`
 
 > URL : `https://api-maps.thinknet.co.th/v2/reverse-geocoding?response_type=full&lat=18.760694&lng=98.971197&api_key=${your_api_key}&app_id=${your_app_id}`
+
+> URL : `https://api-maps.thinknet.co.th/v2/reverse-geocoding?response_type=fullarea&lat=18.760694&lng=98.971197&api_key=${your_api_key}&app_id=${your_app_id}`
 
 #### Responses
 
