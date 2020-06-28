@@ -47,6 +47,7 @@ require('node_modules/mapbox-gl/dist/mapbox-gl.css')
 ```html
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet' />
+<script src="https://api-maps.thinknet.co.th/libs/thinknetmaps.1.0.0-plugin.min.js"></script>
 ```
 
 ## :electric_plug: เริ่มใช้งาน Maps API
@@ -63,6 +64,7 @@ require('node_modules/mapbox-gl/dist/mapbox-gl.css')
   <head>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api-maps.thinknet.co.th/libs/thinknetmaps.1.0.0-plugin.min.js"></script>
   </head>
   <body>
     <div id="map" style="height: 100vh;" />
@@ -80,6 +82,8 @@ require('node_modules/mapbox-gl/dist/mapbox-gl.css')
         zoom: 10 // ค่า Zoom level เริ่มต้น
       });
 
+      const MapboxLogo = new THINKNETMapsLogo({ position: 'bottom-left' }) // position: bottom-left, top-left, top-right, bottom-right
+      map.addControl(MapboxLogo)
     </script>
   </body>
 </html>
