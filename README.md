@@ -82,8 +82,8 @@ require('node_modules/mapbox-gl/dist/mapbox-gl.css')
         zoom: 10 // ค่า Zoom level เริ่มต้น
       });
 
-      const MapboxLogo = new THINKNETMapsLogo({ position: 'bottom-left' }) // position: bottom-left, top-left, top-right, bottom-right
-      map.addControl(MapboxLogo)
+      const TNMapsLogo = new THINKNETMapsLogo({ position: 'bottom-left' }) // position: bottom-left, top-left, top-right, bottom-right
+      map.addControl(TNMapsLogo)
     </script>
   </body>
 </html>
