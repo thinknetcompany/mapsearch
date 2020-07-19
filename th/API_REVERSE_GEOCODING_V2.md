@@ -8,7 +8,7 @@
 
 การค้นหาข้อมูลโดยใช้ระบบพิกัด (lat, lng)
 
-* [ตัวอย่างการใช้งาน](#ตัวอย่างการใช้งาน0)
+* [ตัวอย่างการใช้งาน](#ตัวอย่างการใช้งาน)
 * [Error Response](#Error-Response)
 
 > **GET** `https://api-maps.thinknet.co.th/v2/reverse-geocoding`
